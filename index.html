@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tibia Adventure</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace al archivo de estilos CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Frank Ruhl Libre', sans-serif; 
+            background: image(fondo 2.jpeg)/cover no-repeat fixed;
+            background-size: cover;
+            animation: fadeIn 1s ease-out; 
+            color: #070404;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #top-bar {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffa500;
+            padding: 10px;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        #top-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            padding: 5px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        h1 {
+            padding: 20px;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .dropdown {
+            width: 200px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        .dropdown-content {
+            display: none;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            z-index: 1;
+            color: #fff;
+            border-radius: 10px; /* Añadí un borde redondeado */
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #800f00;
+            text-decoration: none;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 5px; /* Añadí un borde redondeado */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #fff;
+            color: #800f00;
+        }
+
+        footer {
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Nuevos estilos para centrar las frases */
+        .centered-text {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px auto;
+            width: 60%;
+            color: #000;
+        }
+
+        .video-link {
+            color: #800f00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top-bar">
+        <a href="#">Iniciar sesión</a>
+        <a href="#">Registrarse</a>
+    </div>
+
+    <header>
+        <h1>BIENVENIDO AVENTUREROS</h1>
+    </header>
+
+    <section>
+        <h2>Aventureros unidos por el conocimiento</h2>
+        <p>Exploraremos nuevos caminos de conocimiento y riquezas.</p>
+    </section>
+
+    <div id="left-section">
+        <div class="dropdown">
+            <div class="dropdown-content" id="videos-dropdown">
+                <a href="https://www.youtube.com/playlist?list=PL9Le0aOde3f2VoWhE_xoC2hR5qWcE6buE" class="video-link">Lección 1</a>
+            </div>
+            <span onclick="toggleDropdown('videos-dropdown')">Videos del profesor ▼</span>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-content" id="presentations-dropdown">
+                <a href="enlace_a_tu_presentacion1.pdf">HTML</a>
+                <a href="enlace_a_tu_presentacion2.pdf">CSS</a>
+                <a href="enlace_a_tu_presentacion3.pdf">JAVA</a>
+            </div>
+            <span onclick="toggleDropdown('presentations-dropdown')">HTML, CSS, JAVA ▼</span>
+        </div>
+
+        <div class="dropdown">
+            <div class="dropdown-content" id="thanks-dropdown">
+                <p class="centered-text">Gracias profesor por tu esfuerzo en el primer curso. ¡A seguir aprendiendo!</p>
+            </div>
+            <span onclick="toggleDropdown('thanks-dropdown')">Agradecimientos ▼</span>
+        </div>
+    </div>
+
+    <div id="content-section">
+        <section>
+            <h2 class="centered-text">Iniciar en la programación</h2>
+            <p class="centered-text">¡Descubre el fascinante mundo de la programación! Aquí encontrarás recursos y orientación para comenzar tu viaje.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 AVENTUREROS DE BA MULTIPLICA 2.0.</p>
+    </footer>
+
+    <script src="script.js"></script> <!-- Enlace al archivo de JavaScript -->
+</body>
+
+</html>
